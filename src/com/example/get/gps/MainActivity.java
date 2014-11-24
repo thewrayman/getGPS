@@ -1,39 +1,4 @@
 package com.example.get.gps;
-/*package com.example.get.gps;
-
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
-import android.location.*;
-import android.location.LocationListener;
-import android.location.LocationManager;
-
-public class MainActivity extends Activity {
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }
-    
-    
-    
-    
-    @Override
-    protected void onPause() {
-        super.onPause();
-        locationManager.removeUpdates(this);
-    }
-    
-    
-}
-*/
 
 import android.app.Activity;
 import android.content.Context;
@@ -56,6 +21,7 @@ public class MainActivity extends Activity implements LocationListener {
 
   String longitude;
   String latitude;
+  
 /** Called when the activity is first created. */
 
   @Override
@@ -87,12 +53,12 @@ public class MainActivity extends Activity implements LocationListener {
   }
   
   public void buttonclick(View view){
-/*  	Intent intent = new Intent(this, GpsActivity.class);*/
-/*  	TextView longitude = (TextView) findViewById(R.id.TextView02);
-  	TextView latitude = (TextView) findViewById(R.id.TextView04);*/
+  	Intent intent = new Intent(this, GpsActivity.class);
+  	TextView longitude = (TextView) findViewById(R.id.TextView02);
+  	TextView latitude = (TextView) findViewById(R.id.TextView04);
     latituteField.setText(String.valueOf(latitude));
     longitudeField.setText(String.valueOf(longitude));
-/*  	startActivity(intent);*/
+  	startActivity(intent);
 	  
   }
   
